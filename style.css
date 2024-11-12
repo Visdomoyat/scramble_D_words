@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /* background-color: #6510100f; */
+}
+
+.gameContainer {
+  width: 440px;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(102, 9, 9, 0.08);
+}
+
+.gameContainer h3 {
+  font-size: 25px;
+  font-weight: 500;
+  padding: 16px 25px;
+  border-bottom: 1px solid #accc;
+
+}
+
+.start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: solid #1b021b */
+}
+
+#startButton {
+  border: solid none;
+  outline: solid none;
+  color: #fff;
+  background: #523008;
+  cursor: pointer;
+  margin: 15px;
+  padding: 5px 5px;
+  font-size: 25px;
+  border-radius: 10px;
+  /* width: calc (100% / 2 - 8px); */
+  transition: all 0.5s ease;
+}
+
+#startButton:hover {
+  background: #201202
+}
+
+.gameContainer.gamePlay {
+  display: none;
+  margin: 25px 20px 35px;
+}
+
+.gamePlay .word {
+  user-select: none;
+  font-size: 33px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 24px;
+   /* word-break: break-all; */
+  text-transform: uppercase;
+  padding: 10px;
+  /* border: 1px solid black; */
+}
+.progress {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.gameContainer .hints {
+  /* border: 1px solid black; */
+  margin: 10px;
+  padding: 10px;
+}
+
+.gamePlay input {
+  border: 1px solid cyan;
+  width: 100%;
+  height: 60px;
+  outline: none;
+  padding: 0 20px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.gamePlay input:focus {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.gamePlay input::placeholder {
+  color: #927474;
+}
+
+.gamePlay .mark {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.mark button {
+  border:none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px 0;
+  font-size: 17px;
+  border-radius: 5px;
+  width: calc(100% / 2 - 8px);
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.mark button:active {
+  transform: scale(0.97);
+}
+
+.mark .refreshWord {
+  background: #6C7570;
+}
+
+.mark .refreshWord:hover {
+  background: #181a1b;
+}
+
+.mark .submitWord {
+  background: #3571AE;
+}
+
+.mark .submitWord:hover {
+  background: #25505b;
+}
+
+
+.progress {
+  color: #3571AE;
+}
+
+#msg {
+  /* border: 1px solid black; */
+  display: none;
+  font-size: 25px;
+  text-align: center;
+  padding: 19px;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 0 10px 20px rgba(141, 82, 82, 0.08);
+  background: rgb(117, 40, 40);
+  color: White;
+}
+
+#msg .decision {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.decision button {
+  border:none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px 0;
+  font-size: 17px;
+  border-radius: 5px;
+  width: calc(100% / 2 - 8px);
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.decision button:active {
+  transform: scale(0.97);
+}
+
+.decision .quit {
+  background: #6C7570;
+}
+
+.decision .quit:hover {
+  background: #181a1b;
+}
+
+.decision .tryAgain {
+  background: #3571AE;
+}
+
+.decision .tryAgain:hover {
+  background: #25505b;
+}
+
+
+
+@media screen and (max-width: 470px) {
+  .gameContainer h2 {
+    font-size: 30px;
+   padding: 13px 20px;
+  }
+  .gamePlay .word {
+    font-size: 30px;
+    letter-spacing: 20px;
+    margin-right: -20px;
+  }
+  .gameContainer {
+    margin: 20px 20px 30px;
+  }
+ 
+  .gamePlay input {
+    height: 55px;
+    font-size: 17px;
+  }
+  .mark button {
+    padding: 14px 0;
+    font-size: 16px;
+    width: calc(100% / 2 - 7px)
+  }
+  
+}
