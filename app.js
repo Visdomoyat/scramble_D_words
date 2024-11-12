@@ -67,7 +67,7 @@ function init() {
 function initGame() {
     cakeCount = 0;
     limeCount = 0;
-    timeLeft = 5;
+    timeLeft = 30;
     cakeArea.innerHTML = cakeCount;
     limeArea.innerHTML = limeCount;
 
